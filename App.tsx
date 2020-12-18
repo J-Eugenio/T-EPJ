@@ -7,7 +7,7 @@ import Main from './src/app';
 const App: React.FC = () => {
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar style="auto" backgroundColor="blue" />
+      <StatusBar style="auto" backgroundColor="white" />
       <Main />
     </View>
   );
