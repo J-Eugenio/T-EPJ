@@ -1,5 +1,6 @@
-import React, { ReactText, useState } from 'react';
+import React, { ReactText, useState, useCallback, useEffect } from 'react';
 
+import { useNavigation } from '@react-navigation/native';
 import {
   Container,
   Text,
@@ -14,8 +15,19 @@ import {
 import img from '../../Assets/logo2.png';
 import bg from '../../Assets/bg3.jpg';
 
+interface TribunaisProps {
+  nome: string;
+  url: string;
+}
 const Home: React.FC = () => {
-  const [service, setService] = useState<ReactText>('AC');
+  const [uf, setUF] = useState<ReactText>('AC');
+  const [tribunal, setTribunal] = useState<ReactText>(
+    'https://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
+  );
+  const [tribunais, setTribunais] = useState<TribunaisProps[]>(
+    [] as TribunaisProps[],
+  );
+  const navigation = useNavigation();
 
   const estados = [
     {
@@ -128,6 +140,36 @@ const Home: React.FC = () => {
     },
   ];
 
+  const acre = [
+    {
+      nome: 'Justiça Eleitoral',
+      url:
+        'https://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
+    },
+    {
+      nome: 'TRF 1ª Região - 1º grau',
+      url: 'https://pje1g.trf1.jus.br/pje/login.seam',
+    },
+    {
+      nome: 'TRF 1ª Região - 2º grau',
+      url: 'https://pje2g.trf1.jus.br/pje/login.seam',
+    },
+    {
+      nome: 'TRT 14 - 1º grau',
+      url: 'https://pje.trt14.jus.br/primeirograu/login.seam',
+    },
+    {
+      nome: 'TRT 14 - 2º grau',
+      url: 'https://pje.trt14.jus.br/segundograu/login.seam',
+    },
+  ];
+
+  useEffect(() => {
+    console.log(uf);
+    console.log(tribunal);
+    setTribunais(acre);
+  }, [uf, tribunal]);
+
   return (
     <Container>
       <ImageBG source={bg} resizeMode="cover">
@@ -136,9 +178,9 @@ const Home: React.FC = () => {
         <Text>UF:</Text>
         <PickerArea>
           <PickerCustom
-            selectedValue={service}
+            selectedValue={uf}
             onValueChange={(itemValue, itemIndex) => {
-              setService(itemValue);
+              setUF(itemValue);
             }}
             mode="dropdown"
           >
@@ -154,23 +196,25 @@ const Home: React.FC = () => {
         <Text>Tribunal:</Text>
         <PickerArea>
           <PickerCustom
-            selectedValue={service}
+            selectedValue={tribunal}
             onValueChange={(itemValue, itemIndex) => {
-              setService(itemValue);
+              setTribunal(itemValue);
             }}
             mode="dropdown"
           >
-            {estados.map(value => (
+            {tribunais.map(value => (
               <PickerCustom.Item
-                key={value.label}
-                label="Justiça Eleitoral"
-                value={value.label}
+                key={value.nome}
+                label={value.nome}
+                value={value.url}
               />
             ))}
           </PickerCustom>
         </PickerArea>
 
-        <Buttom onPress={() => console.log(service)}>
+        <Buttom
+          onPress={() => navigation.navigate('Webview', { url: tribunal })}
+        >
           <ButtomText>Ir para o site</ButtomText>
         </Buttom>
       </ImageBG>

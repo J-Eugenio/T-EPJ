@@ -42,7 +42,7 @@ export const Buttom = styled.TouchableOpacity`
   margin-top: 20px;
   width: 150px;
   height: 50px;
-  background-color: #00bfff;
+  background-color: #4630eb;
   color: black;
   justify-content: center;
   align-items: center;
