@@ -1,6 +1,12 @@
 import React, { ReactText, useState, useCallback, useEffect } from 'react';
 
 import { useNavigation } from '@react-navigation/native';
+
+import img from '../../Assets/logo2.png';
+import bg from '../../Assets/bg3.jpg';
+
+import { acre, alagoas, amapa, amazonas } from '../Util/estados';
+
 import {
   Container,
   Text,
@@ -11,9 +17,6 @@ import {
   Buttom,
   ButtomText,
 } from './styles';
-
-import img from '../../Assets/logo2.png';
-import bg from '../../Assets/bg3.jpg';
 
 interface TribunaisProps {
   nome: string;
@@ -137,30 +140,6 @@ const Home: React.FC = () => {
     {
       label: 'TO',
       value: 'Tocantins',
-    },
-  ];
-
-  const acre = [
-    {
-      nome: 'Justiça Eleitoral',
-      url:
-        'https://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
-    },
-    {
-      nome: 'TRF 1ª Região - 1º grau',
-      url: 'https://pje1g.trf1.jus.br/pje/login.seam',
-    },
-    {
-      nome: 'TRF 1ª Região - 2º grau',
-      url: 'https://pje2g.trf1.jus.br/pje/login.seam',
-    },
-    {
-      nome: 'TRT 14 - 1º grau',
-      url: 'https://pje.trt14.jus.br/primeirograu/login.seam',
-    },
-    {
-      nome: 'TRT 14 - 2º grau',
-      url: 'https://pje.trt14.jus.br/segundograu/login.seam',
     },
   ];
 
