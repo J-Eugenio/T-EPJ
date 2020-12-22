@@ -4,7 +4,7 @@
     "slug": "T-EPj",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/drawable/icon.png",
+    "icon": "./assets/drawable/icon2.png",
     "splash": {
       "image": "./assets/drawable/screen4.png",
       "resizeMode": "contain",
@@ -23,7 +23,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/drawable/icon.png",
+        "foregroundImage": "./assets/drawable/icon2.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.Apiis.TEPj",
