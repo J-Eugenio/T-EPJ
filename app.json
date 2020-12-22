@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "T-EPJ",
-    "slug": "T-EPJ",
+    "name": "T-EPj",
+    "slug": "T-EPj",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/drawable/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/drawable/screen4.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,16 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.Apiis.TEPj",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/drawable/icon.png",
         "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      },
+      "package": "com.Apiis.TEPj",
+      "versionCode": 1
     }
   }
 }

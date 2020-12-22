@@ -14,7 +14,7 @@ export const Text = styled.Text`
 
 export const Logo = styled.Image`
   border-radius: 15px;
-  margin-top: 40px;
+  margin-top: 15px;
   margin-bottom: 20px;
 `;
 
@@ -33,7 +33,7 @@ export const PickerArea = styled.View`
 
 export const PickerCustom = styled(Picker)`
   background-color: transparent;
-  width: 150px;
+  width: 200px;
   height: 50px;
   color: #000;
 `;

@@ -2,10 +2,38 @@ import React, { ReactText, useState, useCallback, useEffect } from 'react';
 
 import { useNavigation } from '@react-navigation/native';
 
-import img from '../../Assets/logo2.png';
+import img from '../../Assets/Logox2.png';
 import bg from '../../Assets/bg3.jpg';
 
-import { acre, alagoas, amapa, amazonas } from '../Util/estados';
+import {
+  acre,
+  alagoas,
+  amapa,
+  amazonas,
+  bahia,
+  ceara,
+  distrito_federal,
+  espirito_santo,
+  goiais,
+  maranhao,
+  mato_grosso,
+  mato_grosso_do_sul,
+  minas_gerais,
+  para,
+  paraiba,
+  parana,
+  pernambuco,
+  piaui,
+  rio_grande_do_norte,
+  rio_grande_do_sul,
+  rj,
+  rondonia,
+  roraima,
+  santa_catarina,
+  sergipe,
+  sp,
+  tocantins,
+} from '../Util/estados';
 
 import {
   Container,
@@ -143,11 +171,98 @@ const Home: React.FC = () => {
     },
   ];
 
+  const handleSetTribunais = useCallback(() => {
+    switch (uf) {
+      case 'AC':
+        setTribunais(acre);
+        break;
+      case 'AL':
+        setTribunais(alagoas);
+        break;
+      case 'AM':
+        setTribunais(amazonas);
+        break;
+      case 'AP':
+        setTribunais(amapa);
+        break;
+      case 'BA':
+        setTribunais(bahia);
+        break;
+      case 'CE':
+        setTribunais(ceara);
+        break;
+      case 'DF':
+        setTribunais(distrito_federal);
+        break;
+      case 'ES':
+        setTribunais(espirito_santo);
+        break;
+      case 'GO':
+        setTribunais(goiais);
+        break;
+      case 'MA':
+        setTribunais(maranhao);
+        break;
+      case 'MT':
+        setTribunais(mato_grosso);
+        break;
+      case 'MS':
+        setTribunais(mato_grosso_do_sul);
+        break;
+      case 'MG':
+        setTribunais(minas_gerais);
+        break;
+      case 'PA':
+        setTribunais(para);
+        break;
+      case 'PB':
+        setTribunais(paraiba);
+        break;
+      case 'PR':
+        setTribunais(parana);
+        break;
+      case 'PE':
+        setTribunais(pernambuco);
+        break;
+      case 'PI':
+        setTribunais(piaui);
+        break;
+      case 'RJ':
+        setTribunais(rj);
+        break;
+      case 'RN':
+        setTribunais(rio_grande_do_norte);
+        break;
+      case 'RS':
+        setTribunais(rio_grande_do_sul);
+        break;
+      case 'RO':
+        setTribunais(rondonia);
+        break;
+      case 'RR':
+        setTribunais(roraima);
+        break;
+      case 'SC':
+        setTribunais(santa_catarina);
+        break;
+      case 'SP':
+        setTribunais(sp);
+        break;
+      case 'SE':
+        setTribunais(sergipe);
+        break;
+      case 'TO':
+        setTribunais(tocantins);
+        break;
+
+      default:
+        break;
+    }
+  }, [uf]);
+
   useEffect(() => {
-    console.log(uf);
-    console.log(tribunal);
-    setTribunais(acre);
-  }, [uf, tribunal]);
+    handleSetTribunais();
+  }, [uf, handleSetTribunais]);
 
   return (
     <Container>
