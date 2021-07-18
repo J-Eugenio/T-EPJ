@@ -1,5 +1,9 @@
 export const acre = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'Justiça Eleitoral',
     url:
       'https://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
@@ -23,6 +27,10 @@ export const acre = [
 ];
 
 export const alagoas = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'Justiça Eleitoral',
     url:
@@ -56,6 +64,10 @@ export const alagoas = [
 
 export const amazonas = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'Justiça Eleitoral',
     url:
       'http://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
@@ -80,6 +92,10 @@ export const amazonas = [
 
 export const amapa = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'Justiça Eleitoral',
     url:
       'http://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
@@ -103,6 +119,10 @@ export const amapa = [
 ];
 
 export const bahia = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJBA - 1º grau',
     url: 'https://pje.tjba.jus.br/pje-web/login.seam',
@@ -135,6 +155,10 @@ export const bahia = [
 ];
 
 export const ceara = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJCE - 1º grau',
     url: 'https://pje.tjce.jus.br/pje1grau/login.seam',
@@ -175,6 +199,10 @@ export const ceara = [
 ];
 
 export const distrito_federal = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'Justiça Eleitoral',
     url:
@@ -220,6 +248,10 @@ export const distrito_federal = [
 
 export const espirito_santo = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TJES - 1º grau',
     url: 'https://sistemas.tjes.jus.br/pje/login.seam',
   },
@@ -244,6 +276,10 @@ export const espirito_santo = [
 
 export const goiais = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'Justiça Eleitoral',
     url:
       'http://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
@@ -267,6 +303,10 @@ export const goiais = [
 ];
 
 export const maranhao = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJMA - 1º grau',
     url: 'https://pje.tjma.jus.br/pje/login.seam',
@@ -300,6 +340,10 @@ export const maranhao = [
 
 export const mato_grosso = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TJMT - 1º grau',
     url: 'https://pje.tjmt.jus.br/pje/login.seam',
   },
@@ -332,6 +376,10 @@ export const mato_grosso = [
 
 export const mato_grosso_do_sul = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'Justiça Eleitoral',
     url:
       'http://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
@@ -355,6 +403,10 @@ export const mato_grosso_do_sul = [
 ];
 
 export const minas_gerais = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJMG - 1º grau',
     url: 'http://pje.tjmg.jus.br/pje/login.seam',
@@ -388,6 +440,10 @@ export const minas_gerais = [
 
 export const para = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TJPA - 1º grau',
     url: 'http://pje.tjpa.jus.br/pje/login.seam',
   },
@@ -419,6 +475,10 @@ export const para = [
 ];
 
 export const paraiba = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJPB - Corregedoria',
     url: 'https://pje.tjpb.jus.br/pje-corregedoria/login.seam',
@@ -456,6 +516,10 @@ export const paraiba = [
 
 export const parana = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TRT 9 - 1º grau',
     url: 'https://pje.trt9.jus.br/primeirograu/login.seam',
   },
@@ -471,6 +535,10 @@ export const parana = [
 ];
 
 export const pernambuco = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJPE - Corregedoria',
     url: 'https://pje.tjpe.jus.br/cgj/login.seam',
@@ -516,6 +584,10 @@ export const pernambuco = [
 
 export const piaui = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TJPI-1º grau',
     url: 'https://tjpi.pje.jus.br/pje/login.seam',
   },
@@ -548,6 +620,10 @@ export const piaui = [
 
 export const rj = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TJRJ - 1º grau',
     url: 'https://tjrj.pje.jus.br/1g/login.seam',
   },
@@ -567,6 +643,10 @@ export const rj = [
 ];
 
 export const rio_grande_do_norte = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJRN - 1º grau',
     url: 'https://pje.tjrn.jus.br/pje1grau/login.seam',
@@ -608,6 +688,10 @@ export const rio_grande_do_norte = [
 
 export const rio_grande_do_sul = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'Justiça Eleitoral',
     url:
       'http://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
@@ -623,6 +707,10 @@ export const rio_grande_do_sul = [
 ];
 
 export const rondonia = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJRO - 1º grau',
     url: 'https://pje.tjro.jus.br/pg/login.seam',
@@ -656,6 +744,10 @@ export const rondonia = [
 
 export const roraima = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'Justiça Eleitoral',
     url:
       'http://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
@@ -680,6 +772,10 @@ export const roraima = [
 
 export const santa_catarina = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TRT 12 - 1º grau',
     url: 'https://pje.trt12.jus.br/primeirograu/login.seam',
   },
@@ -695,6 +791,10 @@ export const santa_catarina = [
 ];
 
 export const sp = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TJ Militar SP - 1º Grau',
     url: 'https://pje.tjmsp.jus.br/pje-web/',
@@ -736,6 +836,10 @@ export const sp = [
 
 export const sergipe = [
   {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
+  {
     nome: 'TRF 5ª Região - 1º grau',
     url: 'https://pje.jfse.jus.br/pje/login.seam',
   },
@@ -759,6 +863,10 @@ export const sergipe = [
 ];
 
 export const tocantins = [
+  {
+    nome: 'Selecione uma opção',
+    url: 'null',
+  },
   {
     nome: 'TRF 5ª Região - 1º grau',
     url: 'https://pje.jfse.jus.br/pje/login.seam',

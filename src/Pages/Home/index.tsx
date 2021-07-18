@@ -52,12 +52,12 @@ interface TribunaisProps {
 }
 const Home: React.FC = () => {
   const [uf, setUF] = useState<ReactText>('AC');
-  const [tribunal, setTribunal] = useState<ReactText>(
-    'https://www.tse.jus.br/servicos-judiciais/processos/processo-judicial-eletronico/processo-judicial-eletronico-1',
-  );
+  const [tribunal, setTribunal] = useState<ReactText>('null');
   const [tribunais, setTribunais] = useState<TribunaisProps[]>(
     [] as TribunaisProps[],
   );
+  const [disabledButton, setDisabledButton] = useState<boolean>(false);
+
   const navigation = useNavigation();
 
   const estados = [
@@ -175,83 +175,110 @@ const Home: React.FC = () => {
     switch (uf) {
       case 'AC':
         setTribunais(acre);
+        setDisabledButton(true);
         break;
       case 'AL':
         setTribunais(alagoas);
+        setDisabledButton(true);
         break;
       case 'AM':
+        setDisabledButton(true);
         setTribunais(amazonas);
         break;
       case 'AP':
+        setDisabledButton(true);
         setTribunais(amapa);
         break;
       case 'BA':
+        setDisabledButton(true);
         setTribunais(bahia);
         break;
       case 'CE':
+        setDisabledButton(true);
         setTribunais(ceara);
         break;
       case 'DF':
+        setDisabledButton(true);
         setTribunais(distrito_federal);
         break;
       case 'ES':
+        setDisabledButton(true);
         setTribunais(espirito_santo);
         break;
       case 'GO':
+        setDisabledButton(true);
         setTribunais(goiais);
         break;
       case 'MA':
+        setDisabledButton(true);
         setTribunais(maranhao);
         break;
       case 'MT':
+        setDisabledButton(true);
         setTribunais(mato_grosso);
         break;
       case 'MS':
+        setDisabledButton(true);
         setTribunais(mato_grosso_do_sul);
         break;
       case 'MG':
+        setDisabledButton(true);
         setTribunais(minas_gerais);
         break;
       case 'PA':
+        setDisabledButton(true);
         setTribunais(para);
         break;
       case 'PB':
+        setDisabledButton(true);
         setTribunais(paraiba);
         break;
       case 'PR':
+        setDisabledButton(true);
         setTribunais(parana);
         break;
       case 'PE':
+        setDisabledButton(true);
         setTribunais(pernambuco);
         break;
       case 'PI':
+        setDisabledButton(true);
         setTribunais(piaui);
         break;
       case 'RJ':
+        setDisabledButton(true);
         setTribunais(rj);
         break;
       case 'RN':
+        setDisabledButton(true);
         setTribunais(rio_grande_do_norte);
         break;
       case 'RS':
+        setDisabledButton(true);
         setTribunais(rio_grande_do_sul);
         break;
       case 'RO':
+        setDisabledButton(true);
         setTribunais(rondonia);
         break;
       case 'RR':
+        setDisabledButton(true);
         setTribunais(roraima);
         break;
       case 'SC':
+        setDisabledButton(true);
         setTribunais(santa_catarina);
         break;
       case 'SP':
+        setDisabledButton(true);
         setTribunais(sp);
         break;
       case 'SE':
+        setDisabledButton(true);
         setTribunais(sergipe);
         break;
       case 'TO':
+        setDisabledButton(true);
         setTribunais(tocantins);
         break;
 
@@ -259,6 +286,12 @@ const Home: React.FC = () => {
         break;
     }
   }, [uf]);
+
+  useEffect(() => {
+    if (tribunal === 'null') {
+      setDisabledButton(true);
+    }
+  }, [tribunal]);
 
   useEffect(() => {
     handleSetTribunais();
@@ -293,12 +326,14 @@ const Home: React.FC = () => {
             selectedValue={tribunal}
             onValueChange={(itemValue, itemIndex) => {
               setTribunal(itemValue);
+              setDisabledButton(false);
             }}
             mode="dropdown"
           >
-            {tribunais.map(value => (
+            {tribunais.map((value, index) => (
               <PickerCustom.Item
-                key={value.nome}
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
                 label={value.nome}
                 value={value.url}
               />
@@ -308,6 +343,7 @@ const Home: React.FC = () => {
 
         <Buttom
           onPress={() => navigation.navigate('Webview', { url: tribunal })}
+          disabled={disabledButton}
         >
           <ButtomText>Ir para o site</ButtomText>
         </Buttom>

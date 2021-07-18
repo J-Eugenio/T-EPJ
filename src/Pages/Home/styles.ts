@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 import { Picker } from '@react-native-picker/picker';
 
+interface ButtonProps {
+  disabled: boolean;
+}
+
 export const Container = styled.View`
   height: 100%;
 `;
@@ -38,11 +42,11 @@ export const PickerCustom = styled(Picker)`
   color: #000;
 `;
 
-export const Buttom = styled.TouchableOpacity`
+export const Buttom = styled.TouchableOpacity<ButtonProps>`
   margin-top: 20px;
   width: 150px;
   height: 50px;
-  background-color: #4630eb;
+  background-color: ${props => (props.disabled ? 'grey' : '#4630eb')};
   color: black;
   justify-content: center;
   align-items: center;
