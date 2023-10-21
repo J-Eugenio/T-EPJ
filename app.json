@@ -2,7 +2,7 @@
   "expo": {
     "name": "T-EPj",
     "slug": "T-EPj",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/drawable/icon2.png",
     "splash": {
@@ -11,7 +11,8 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/0cb13417-6353-480c-a6ee-4e2a20cdc206"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,7 +20,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.Apiis.TEPj",
-      "buildNumber": "1.0.0"
+      "buildNumber": "2.0.0"
     },
     "android": {
       "adaptiveIcon": {
@@ -27,7 +28,15 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.Apiis.TEPj",
-      "versionCode": 1
+      "versionCode": 2
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0cb13417-6353-480c-a6ee-4e2a20cdc206"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
