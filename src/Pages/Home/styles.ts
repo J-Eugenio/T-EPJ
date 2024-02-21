@@ -6,7 +6,8 @@ interface ButtonProps {
 }
 
 export const Container = styled.View`
-  height: 100%;
+  display: flex;
+  flex: 1;
 `;
 
 export const Text = styled.Text`
@@ -24,7 +25,6 @@ export const Logo = styled.Image`
 
 export const ImageBG = styled.ImageBackground`
   flex: 1;
-  width: 100%;
 
   align-items: center;
 `;
