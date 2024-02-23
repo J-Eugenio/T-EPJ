@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView as WV } from 'react-native-webview';
 import { useRoute, RouteProp, useNavigation } from '@react-navigation/native';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -11,7 +11,7 @@ type ParamList = {
     url: string;
   };
 };
-const Webview: React.FC = () => {
+export default function Webview(){
   const { params } = useRoute<RouteProp<ParamList, 'Props'>>();
   const { url } = params;
 
@@ -20,7 +20,7 @@ const Webview: React.FC = () => {
   return (
     <Container>
       <View style={{ flex: 1 }}>
-        <WebView
+        <WV
           source={{
             uri: url,
           }}
@@ -35,4 +35,3 @@ const Webview: React.FC = () => {
   );
 };
 
-export default Webview;

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "T-EPj",
-    "slug": "T-EPj",
+    "name": "T-EPJv2",
+    "slug": "T-EPJv2",
     "version": "7.0.0",
     "orientation": "portrait",
     "icon": "./assets/drawable/icon2.png",
@@ -10,6 +10,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "userInterfaceStyle": "light",
     "updates": {
       "fallbackToCacheTimeout": 0,
       "url": "https://u.expo.dev/0cb13417-6353-480c-a6ee-4e2a20cdc206"
@@ -35,8 +36,8 @@
         "projectId": "0cb13417-6353-480c-a6ee-4e2a20cdc206"
       }
     },
-    "runtimeVersion": {
-      "policy": "appVersion"
+    "web": {
+      "favicon": "./assets/favicon.png"
     }
   }
 }

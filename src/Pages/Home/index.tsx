@@ -1,9 +1,10 @@
-import React, { ReactText, useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 
 import { useNavigation } from '@react-navigation/native';
+import { Picker } from '@react-native-picker/picker';
 
-import img from '../../Assets/Logox2.png';
-import bg from '../../Assets/bg3.jpg';
+import img from '../../../assets/Logox2.png';
+import bg from '../../../assets/bg3.jpg';
 
 import {
   acre,
@@ -33,7 +34,7 @@ import {
   sergipe,
   sp,
   tocantins,
-} from '../Util/estados';
+} from '../../Util/estados';
 
 import {
   Container,
@@ -50,15 +51,15 @@ interface TribunaisProps {
   nome: string;
   url: string;
 }
-const Home: React.FC = () => {
-  const [uf, setUF] = useState<ReactText>('AC');
-  const [tribunal, setTribunal] = useState<ReactText>('null');
+export default function Home(){
+  const [uf, setUF] = useState('AC');
+  const [tribunal, setTribunal] = useState('null');
   const [tribunais, setTribunais] = useState<TribunaisProps[]>(
     [] as TribunaisProps[],
   );
   const [disabledButton, setDisabledButton] = useState<boolean>(false);
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
   const estados = [
     {
@@ -303,35 +304,35 @@ const Home: React.FC = () => {
         <Logo source={img} />
         <Text>Seleciona uma opção</Text>
         <Text>UF:</Text>
-        {/* <PickerArea>
+        <PickerArea>
           <PickerCustom
             selectedValue={uf}
-            onValueChange={(itemValue, itemIndex) => {
+            onValueChange={(itemValue: any, itemIndex) => {
               setUF(itemValue);
             }}
             mode="dropdown"
           >
             {estados.map(value => (
-              <PickerCustom.Item
+              <Picker.Item
                 key={value.label}
                 label={value.value}
                 value={value.label}
               />
             ))}
           </PickerCustom>
-        </PickerArea> */}
+        </PickerArea>
         <Text>Tribunal:</Text>
-        {/* <PickerArea>
+        <PickerArea>
           <PickerCustom
             selectedValue={tribunal}
-            onValueChange={(itemValue, itemIndex) => {
+            onValueChange={(itemValue: any, itemIndex) => {
               setTribunal(itemValue);
               setDisabledButton(false);
             }}
             mode="dropdown"
           >
             {tribunais.map((value, index) => (
-              <PickerCustom.Item
+              <Picker.Item
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
                 label={value.nome}
@@ -339,17 +340,15 @@ const Home: React.FC = () => {
               />
             ))}
           </PickerCustom>
-        </PickerArea> */}
+        </PickerArea>
 
-        {/* <Buttom
+        <Buttom
           onPress={() => navigation.navigate('Webview', { url: tribunal })}
           disabled={disabledButton}
         >
           <ButtomText>Ir para o site</ButtomText>
-        </Buttom> */}
+        </Buttom>
       </ImageBG>
     </Container>
   );
 };
-
-export default Home;

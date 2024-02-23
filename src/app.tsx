@@ -1,13 +1,13 @@
 import 'react-native-gesture-handler';
-import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Home from './Pages/Home';
-import Webview from './Pages/WebView';
+import Home from './pages/Home';
+import Webview from './pages/WebView';
 
-const Main: React.FC = () => {
-  const Stack = createStackNavigator();
+export default function Main() {
+  const Stack = createNativeStackNavigator();
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -21,6 +21,4 @@ const Main: React.FC = () => {
       </Stack.Navigator>
     </NavigationContainer>
   );
-};
-
-export default Main;
+}
