@@ -303,7 +303,7 @@ const Home: React.FC = () => {
         <Logo source={img} />
         <Text>Seleciona uma opção</Text>
         <Text>UF:</Text>
-        <PickerArea>
+        {/* <PickerArea>
           <PickerCustom
             selectedValue={uf}
             onValueChange={(itemValue, itemIndex) => {
@@ -319,9 +319,9 @@ const Home: React.FC = () => {
               />
             ))}
           </PickerCustom>
-        </PickerArea>
+        </PickerArea> */}
         <Text>Tribunal:</Text>
-        <PickerArea>
+        {/* <PickerArea>
           <PickerCustom
             selectedValue={tribunal}
             onValueChange={(itemValue, itemIndex) => {
@@ -339,14 +339,14 @@ const Home: React.FC = () => {
               />
             ))}
           </PickerCustom>
-        </PickerArea>
+        </PickerArea> */}
 
-        <Buttom
+        {/* <Buttom
           onPress={() => navigation.navigate('Webview', { url: tribunal })}
           disabled={disabledButton}
         >
           <ButtomText>Ir para o site</ButtomText>
-        </Buttom>
+        </Buttom> */}
       </ImageBG>
     </Container>
   );
